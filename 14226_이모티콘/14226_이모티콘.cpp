@@ -31,7 +31,7 @@ int bfs()
 			visited[u.n + u.c][u.c] = 1;
 			q.push({u.n + u.c, u.c, u.t + 1});
 		}
-		if (!visited[u.n][u.n]) // duplicate
+		if (u.n != u.c && !visited[u.n][u.n]) // duplicate
 		{
 			map[u.n][u.n] = u.t + 1;
 			visited[u.n][u.n] = 1;
